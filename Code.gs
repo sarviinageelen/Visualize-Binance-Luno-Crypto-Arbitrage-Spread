@@ -2,12 +2,12 @@
 function onOpen() {
   var ui = SpreadsheetApp.getUi();
   ui.createMenu('🚀__Crypto Arbitrage')
-      .addItem('🟢__Get Data','callStressCryptoAPI')
+      .addItem('🟢__Get Data','callCryptoAPI')
       .addToUi();
 }
 
 // function to call crypto API
-function callStressCryptoAPI() {
+function callCryptoAPI() {
 
   //
   // Get Timestamp Data
