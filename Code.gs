@@ -1,13 +1,13 @@
 // custom menu
 function onOpen() {
   var ui = SpreadsheetApp.getUi();
-  ui.createMenu('Crypto Arbitrage')
-      .addItem('Get Arbitrage Data','callCryptoAPI')
+  ui.createMenu('🚀__Crypto Arbitrage')
+      .addItem('🟢__Get Data','callStressCryptoAPI')
       .addToUi();
 }
 
 // function to call crypto API
-function callCryptoAPI() {
+function callStressCryptoAPI() {
 
   //
   // Get Timestamp Data
@@ -48,12 +48,12 @@ function callCryptoAPI() {
   //
   
   // Call the API
-  var response3 = UrlFetchApp.fetch("https://coinograph.io/ticker/?symbol=binance:xrpusdt");
+  var response3 = UrlFetchApp.fetch("https://s1.bitcoinwisdom.io/trades?since=0&symbol=binancexrpusdt&nonce=1614251045");
   
   // Parse the JSON reply
   var json3 = response3.getContentText();
   var data3 = JSON.parse(json3);
-  var data3 = data3["bid"]
+  var data3 = data3[29]["price"];
   
   Logger.log(data3);
 
