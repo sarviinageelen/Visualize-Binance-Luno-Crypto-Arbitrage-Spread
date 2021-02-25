@@ -1,5 +1,13 @@
-function callCryptoAPI() {
+// custom menu
+function onOpen() {
+  var ui = SpreadsheetApp.getUi();
+  ui.createMenu('Crypto Arbitrage')
+      .addItem('Get Arbitrage Data','callCryptoAPI')
+      .addToUi();
+}
 
+// function to call crypto API
+function callCryptoAPI() {
 
   //
   // Get Timestamp Data
@@ -51,6 +59,5 @@ function callCryptoAPI() {
 
   var sheet3 = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("Binance");
   sheet3.getRange(sheet3.getLastRow() + 1,1).setValue([data3]);
-
 
 }
