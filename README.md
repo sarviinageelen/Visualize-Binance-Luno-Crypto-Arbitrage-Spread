@@ -1,2 +1,2 @@
-# Crypto-Google-Apps-Scripts
-Binance &amp; Luno Market Order Data in Google Sheets
+# Visualize Binance & Luno Crypto Arbitrage Spread
+Alpha on visualizing arbitrage spread between two exchanges due to market liquidity.
